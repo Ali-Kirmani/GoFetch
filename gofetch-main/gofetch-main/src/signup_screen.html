@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>GoFetch Sign Up</title>
+</head>
+<body> 
+    <div class="center-container" id="signup_1">
+        <img src="../assets/gofetch.png" alt="Logo" style="max-width: 55%;max-height:55%; margin-top: -10px;">
+        <div class="header">Sign Up </div>
+        <div class="login_content">
+            <div class="subheader" style="text-align: center; margin-top: -10px;">User Information</div>
+            <form id="sign_up_info1">
+                <label for="name">Enter Full Name*:</label></br>
+                    <input type="text" id="name" placeholder="Full Name" required></br>
+                    <div class="error"></div>
+               <label for="email">Enter Email*:</label></br>
+                    <input type="email" id="email" placeholder="E-mail" required></br>
+                    <div class="error"></div>
+                <label for="password">Create Password*:</label></br>
+                    <input type="password" id="password" placeholder="Password" required></br>
+                    <div class="error"></div>
+                <label for="password_confirm">Confirm Password*:</label></br>
+                    <input type="password" id="password_confirm" placeholder="Confirm Password" required></br>
+                    <div class="error"></div>
+                <label for="birthday">Date of Birth*:</label></br>
+                <input type="date" id="birthday" name="birthday" required></br></br>
+                <div class="content" style="background-color: #ffffff; scale: 0.8; width: 250px;" onclick="alert('Under Development: Media upload should be present')">
+                    Upload Profile Photos (+)
+                </div>
+            </form>
+            <label>Already have an account?</label><br><font size="-1"><a href="login_screen.html">Log In</a></font>
+        </div>
+        <div class="bottom_nav_signup">
+            <button class="button-inverted" id="cancel_button"> Cancel</button>
+            <div class="nav-icon" style="margin: 75px 6px 6px 6px;">1/3</div>
+            <button class="button-inverted" id="next_button"> Next </button>
+        </div>
+    </div>
+    <script type="text/javascript" src="signup.js"></script>
+</body>
+</html>

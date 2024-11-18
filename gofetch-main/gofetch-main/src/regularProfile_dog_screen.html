@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <title>Go Fetch Home Screen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <script type="text/javascript" src="buttons.js"></script>
+</head>
+<div id="mySidenav" class="sidenav">
+    <div id="viewProf" class="sidenav">
+        <div class="topInfo">My Profiles:</div>
+        <div class="bar"></div>
+        <a href="./regularProfile_screen.html" class="subitem">My Profile</a>
+        <a href="./regularProfile_dog_screen.html" class="subitem">My Dog</a>
+        <a href="./addDog_screen.html" class="subitem">+ Add Dog</a>
+        <div class="bottom-bar"></div>
+        <a class="return" onclick="closeProf()">Return to Main</a>
+    </div>
+
+    <!-- <a href="./home_screen.html">Home</a> -->
+    <a class="menu-item" onclick="openProf()">Your Profiles<div class="arrow">></div></a>
+    <a class="menu-item" href="./settingsmenu/settings.html">Settings<div class="arrow">></div></a>
+    <a class="logout" href="./login_screen.html">Logout</a>
+</div>
+
+<body>
+    <div class="container">
+        <div class="top_menu">
+            <span id="hamburger-menu" class="hamburger-menu" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </span>
+            <img src="../assets/gofetch.png" alt="Logo" class="fetch-logo">
+        </div>
+
+        <div class="image-content">
+            <img src="../assets/dog1.png" alt="Dog Image" class="profile-image">
+        </div>
+
+
+        <style>
+            .user-name-container {
+                display: flex;
+                justify-content: left;
+                width: 80%;
+                padding-left: 5px;
+                margin-top: 20px;
+            }
+        </style>
+        <div class="info-content">
+            <div class="user-name-container">
+                <div class="profile-name" id="dog_name">
+                </div>
+            </div>
+            <div class="subheader">
+                <hr><b>Location:</b> Calgary, AB
+            </div>
+            <div class="subheader"><b>About:</b></div>
+            <div class="about" id="dog_bio">
+            </div>
+            <div class="subheader"><b>Tags:</b></div>
+            <div class="about" id="tags" style="margin-left: 20px;">
+            </div>
+        </div>
+        <a href="./editDogProfile_screen.html" class="button-inverted" style="margin-top: 2px;">Edit Profile</a>
+        <div class="bottom_menu">
+            <a href="./inbox.html" class="inbox"><img src="../../assets/message_icon.png" alt="Messages"></a>
+            <a href="./home_screen.html" class="home"><img src="../../assets/home_icon.png" alt="Home" ></a>
+            <a href="./regularProfile_screen.html" class="profile"><img src="../../assets/profile_icon.png" alt="Profile" ></a>
+        </div>
+    </div>
+    <script type="text/javascript" src="signup2.js"></script>
+    <script type="text/javascript" src="signup3.js"></script>
+    <script type="text/javascript">
+        document.getElementById("dog_name").innerHTML = getDogName(); 
+        document.getElementById("dog_bio").innerHTML = getDogBio();
+        tag_list = getTags();
+        for (var i = 0; i < tag_list.length; i++) {
+            document.getElementById("tags").innerHTML += "<span style='margin-left: 3px;'>" + tag_list[i] + "</span>";
+        }
+    </script>
+</body>
+</html>

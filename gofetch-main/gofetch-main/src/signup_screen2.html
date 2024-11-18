@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="signup.js"></script>
+    <title>GoFetch Sign Up 2</title>
+</head>
+<body> 
+    <div class="center-container">
+        <img src="../assets/gofetch.png" alt="Logo" style="max-width: 55%;max-height:55%;">
+        <div class="header">Sign Up </div>
+        <div class="login_content">
+            <div class="subheader" style="text-align: center; margin-top: -10px;">Dog Information</div>
+            <form id="sign_up_info2">
+                <label for="dog_name">Dog Name*:</label></br>
+                    <input type="text" id="dog_name" placeholder="Dog Name"></br>
+                <label for="Age Range">Please select an age range*:</label></br>
+                <div class="age_range" style="justify-content: left; font-size: 16px;">
+                    <select name="Age Range" id="age_range">
+                        <option value="" disabled selected>Select an age range</option>
+                        <option value="age1">Puppy (12 weeks - 2 years)</option>
+                        <option value="age2">Adult (2 - 9 years)</option>
+                        <option value="age3">Senior (9+ years)</option>
+                      </select><br>
+                </div>
+                <label for="Reproductive Status">Please enter your dog's reproductive status*:</label></br>
+                <div class="reproductive_status" style="justify-content: left; vertical-align: center; font-size: 16px;">
+                    <select name="Reproductive Status" id="reproductive_status">
+                        <option value="" disabled selected>Select reproductive status</option>
+                        <option value="female_fixed">Female Spayed</option>
+                        <option value="male_fixed">Male Neutered</option>
+                        <option value="female">Female Intact</option>
+                        <option value="male">Male Intact</option>
+                      </select><br>
+                </div><br>
+                <label for="vaccine status" style="padding-right: 16px; text-align: left;">I confirm my dog has been vaccinated with accordance to local law*</label>
+                <input type="checkbox" style="transform: translateY(-14px) scale(0.6) translateX(180px);" id="vaccine_status" name="vaccine_status" value="vaccine_status"/><br>
+                <div class="content" style="background-color: #ffffff; scale: 0.8; width: 250px;" onclick="alert('Under Development: Media upload should be present')">
+                    Upload Dog Profile Photos (+)
+                </div>
+            </form><br>
+            <label>Already have an account?</label><br>
+            <font size="-1"><a href="login_screen.html">Log In</a></font>
+        </div>
+        <div class="bottom_nav_signup">
+            <button class="button-inverted" id="back1">Back</button>
+            <div class="nav-icon" style="margin: 75px 6px 6px 6px;">2/3</div>
+            <button class="button-inverted" id="next_button2">Next</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="signup2.js"></script>
+</body>
+</html>

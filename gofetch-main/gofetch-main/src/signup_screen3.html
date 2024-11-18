@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="tag_styles.css">
+    <script type="text/javascript" src="signup.js"></script>
+    <title>GoFetch Sign Up 3</title>
+</head>
+<body> 
+    <div class="center-container">
+        <img src="../assets/gofetch.png" alt="Logo" style="max-width: 55%;max-height:55%;">
+        <div class="header">Sign Up </div>
+        <div class="login_content">
+            <div class="subheader" style="text-align: center; margin-top: -10px;">Profile Set-Up</div>
+            <form id="sign_up_info3">
+                <label for="personal_bio">About you*:</label></br>
+                    <textarea maxlength="150" rows="2" cols="30" name="Bio" input id = "personal_bio" placeholder="Enter a brief description of yourself here" class = "textbox"></textarea>
+                <label for="dog_bio">About your dog*:</label></br>
+                    <textarea maxlength="150" rows="2" cols="30" name="Dog bio" input id = "dog_bio" placeholder="Enter a brief description of your dog here" class = "textbox"></textarea>
+                <div class="tags-input"> 
+                    <ul id="tags"></ul> <!-- Unordered list for tags-->
+                    <p>
+                        <label for="input-tag">Add up to 10 tags to describe you and your dog:</label><br>
+                        <input type="text" id="input-tag" placeholder="Add tags..." /> 
+                    </p>
+                </div> 
+            </form>
+            <label for="login_button">Already have an account?</label><br>
+            <font size="-1"><a href="login_screen.html">Log In</a></font>
+        </div>
+        <div class="bottom_nav_signup">
+            <button class="button-inverted" id="back2">Back</button>
+            <div class="nav-icon" style="margin: 75px 6px 6px 6px;">3/3</div>
+            <button class="button-inverted" id="confirm_button">Confirm</button> 
+        </div>
+    </div>
+    <script type="text/javascript" src="signup3.js"></script>
+</body>
+</html>

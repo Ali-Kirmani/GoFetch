@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inbox.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <title>GoFetch Inbox</title>
+    <script type="text/javascript" src="buttons.js"></script>
+</head>
+
+<div id="mySidenav" class="sidenav">
+    <div id="viewProf" class="sidenav">
+        <span><br><strong>My Profiles:</strong></span>
+        <a href="./regularProfile_screen.html">My Profile</a>
+        <a href="./regularProfile_dog_screen.html">My Dog</a>
+        <a href="./addDog_screen.html">+Add Dog</a>
+        <a class="return" onclick="closeProf()">Return to Main</a>
+    </div>
+
+    <!-- <a href="./home_screen.html">Home</a> -->
+    <a class="viewProf" onclick="openProf()">Your Profiles</a>
+    <a href="./settingsmenu/settings.html">Settings</a>
+    <a class="logout" href="./login_screen.html">Logout</a>
+</div>
+
+
+<body>
+    <div class="container">
+        <div class="top_menu">
+            <span id="hamburger-menu" class="hamburger-menu" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </span>
+            <img src="../assets/gofetch.png" alt="Logo" class="fetch-logo">
+        </div>
+        <!-- 
+        ======================================================================== 
+                            kyle's nav bar content ends here
+        ========================================================================
+         -->
+        <div class="header">Matches</div> 
+        <div class="content">
+            <a href="messagesSharlin.html"><img src="../assets/user3.png" alt="Logo" class="fetch-logoInbox" style=" border-radius: 50%; border: 2px solid #fff; width: 70px; height: 70px; margin-top: 30px;"></a>
+            <a href="messagesTim.html"><img src="../assets/user4.png" alt="Logo" class="fetch-logoInbox" style=" border-radius: 50%; border: 2px solid #fff; width: 70px; height: 70px; margin-top: 30px;"></a>
+            <a href="messagesgofetch.html"><img src="../assets/gofetch.png" alt="Logo" class="fetch-logoInbox" style=" border-radius: 50%; border: 2px solid #fff; width: 70px; height: 70px; margin-top: 30px; "></a>
+        </div>
+        <div class="header-topmargin">Inbox</div>
+        <div class="content" style="text-align: left; width: 90%;">
+            
+            <a href="messagesJohnny.html" style = "color: black;text-decoration: none;">
+            <div class="message-container">
+                <img src="../assets/profile_icon.png" alt="Logo">
+                Johnny <br>
+                <font size="-2"><p>Sorry I got really busy, lets meet up tomorrow!</p></font>
+            </div>
+        </a>
+
+
+            
+            <hr style="background-color: white; height: 3px; border-color: white; border-style: none;">
+            
+            <a href="messagesMonke.html" style = "color: black;text-decoration: none;">
+            <div class="message-container">
+                <img src="../assets/user.png" alt="Logo">
+                Monke<br>
+                <font size="-2"><p >You: Hi! How are you? Want to meet up by 4pm tomorrow? </p></font>
+            </div>
+        </a>
+        </div>
+        
+        
+        <div class="bottom_menu">
+            <a href="./inbox.html" class="inbox"><img src="../../assets/message_icon.png" alt="Messages"></a>
+            <a href="./home_screen.html" class="home"><img src="../../assets/home_icon.png" alt="Home" ></a>
+            <a href="./regularProfile_screen.html" class="profile"><img src="../../assets/profile_icon.png" alt="Profile" ></a>
+        </div>
+    </div>
+</body>
+</html>
+

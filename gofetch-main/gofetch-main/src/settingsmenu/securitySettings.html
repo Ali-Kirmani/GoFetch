@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <title>Go Fetch Home Screen</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <script type="text/javascript" src="../buttons.js"></script>
+</head>
+
+<!-- 
+================================================================================ 
+                        kyle's nav bar content starts here
+================================================================================
+-->
+
+<div id="mySidenav" class="sidenav">
+    <div id="viewProf" class="sidenav">
+        <div class="topInfo">My Profiles:</div>
+        <div class="bar"></div>
+        <a href="../regularProfile_screen.html" class="subitem">My Profile</a>
+        <a href="../regularProfile_dog_screen.html" class="subitem">My Dog</a>
+        <a href="../addDog_screen.html" class="subitem">+ Add Dog</a>
+        <div class="bottom-bar"></div>
+        <a class="return" onclick="closeProf()">Return to Main</a>
+    </div>
+
+    <!-- <a href="./home_screen.html">Home</a> -->
+    <a class="menu-item" onclick="openProf()">Your Profiles<div class="arrow">></div></a>
+    <a class="menu-item" href="./settings.html">Settings<div class="arrow">></div></a>
+    <a class="logout" href="../login_screen.html">Logout</a>
+</div>
+
+
+<body>
+    <div class="container">
+        <div class="top_menu">
+            <span id="hamburger-menu" class="hamburger-menu" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </span>
+            <img src="../../assets/gofetch.png" alt="Logo" class="fetch-logo">
+        </div>
+        <!-- 
+        ======================================================================== 
+                            kyle's nav bar content ends here
+        ========================================================================
+         -->
+
+        <div class="settings-content" style="height: 65%">
+            <div class="header"><u>Security/Privacy Settings</u></div>
+            <div class="menu-item">
+                <form>
+                    <label class="checkbox-label" for="msgCheck">Allow app to use location:</label>
+                    <input type="checkbox" id="msgCheck" name="msgCheck" value="Checked"><br>
+
+                    <label class="checkbox-label" for="matchCheck">Allow users to send pictures in inbox:</label>
+                    <input type="checkbox" id="matchCheck" name="matchCheck" value="Checked"><br>
+
+                    <label class="checkbox-label" for="masterCheck">Allow all notifications:</label>
+                    <input type="checkbox" id="masterCheck" name="masterCheck" value="Checked"><br>
+                </form>
+            </div>
+            
+            <a class="save-button" href="./securitySettings.html">Save</a><br>
+            <a class="return" href="./settings.html">Return to Settings<span class="arrow">
+                    <<< </span></a>
+
+        </div>
+
+
+        <div class="bottom_menu">
+            <a href="../inbox.html" class="inbox"><img src="../../assets/message_icon.png" alt="Messages"></a>
+            <a href="../home_screen.html" class="home"><img src="../../assets/home_icon.png" alt="Home" ></a>
+            <a href="../regularProfile_screen.html" class="profile"><img src="../../assets/profile_icon.png" alt="Profile" ></a>
+        </div>
+    </div>
+    
+</body>
+
+</html>

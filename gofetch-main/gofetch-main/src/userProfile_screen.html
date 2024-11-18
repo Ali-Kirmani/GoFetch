@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GoFetch Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="tag_styles.css">
+    <style>
+        .middle-text {
+            flex: 1;
+            text-align: center;
+            font-size: 1rem;
+            margin-left: -30px;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        .center-align {
+            margin-top: -15px;
+            /* Adjust the margin-top as needed */
+        }
+
+        .large-textbox {
+            width: 250px;
+            /* Adjust the width as desired */
+            height: 75px;
+            /* Adjust the height as desired */
+            margin-left: 5px;
+            /* Adjust the margin as needed */
+        }
+
+        .medium-textbox {
+            width: auto;
+            /* Adjust the width as desired */
+            height: auto;
+            font-size: large;
+            padding: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top_menu" style="background-color: #ffffff; border-color: #000;">
+            <a href="regularProfile_screen.html" alt="Back" class="back-arrow"
+                style="margin-top: 15px; margin-right:30px; margin-left: 0px; zoom: 1;">
+                <img src="../assets/BackArrow.png"
+                    style="position: absolute; width: 40px; height: 40px; margin: -20px -25px; transform: translateX(20px);"></a>
+            <h3>Editing User Profile</h3>
+            <img style="width: 25px; margin-left: 5px; margin-bottom: 5px;" src="../assets/profile_icon.png"
+                alt="Profile" class="back-arrow"
+                style="position: absolute; width: 40px; height: 40px; margin: -20px -25px">
+        </div>
+
+        <div class="content" style="background-color: #ffffff;" onclick="alert('Under Development')">
+            Upload Up To 10 Images (+)
+        </div><br>
+        <div class="image-content">
+            <img src="../assets/monkey1.png" alt="User Image" class="profile-image" style="height: 160px;">
+        </div>
+        <div>
+            <input type="text" id="name" placeholder="Please enter a name" class="medium-textbox"
+                style="margin-top: 10px;"></input>
+        </div>
+
+        <div class="content left-align" style="padding: 4px;">
+            <label for="bio" style="text-align: left;">Edit Bio:</label> <br>
+            <textarea id="personal_bio" placeholder="Enter information about yourself..."
+                class="large-textbox"></textarea>
+            <label for="input-tag">Add tags to describe you and your dog:</label>
+            <div class="tags-input">
+                <p><input type="text" id="input-tag" placeholder="Add up to 10 tags..." /></p>
+                <ul id="tags"></ul> <!-- Unordered list for tags-->
+            </div>
+        </div>
+        <button class="button-inverted" style="margin-top: 2px;" id="save_changes">Save Changes</button>
+
+
+    
+
+    <!-- </div> -->
+    <script type="text/javascript" src="signup.js"></script>
+    <script type="text/javascript" src="signup3.js"></script>
+    <script type="text/javascript">
+        document.getElementById("name").value = getPersonName();
+        document.getElementById("personal_bio").value = getPersonalBio();
+        tag_list = getTags();
+        for (var i = 0; i < tag_list.length; i++) {
+            if (tag_list[i] == '') {
+                continue;
+            }
+            addTag(tag_list[i]);
+        }
+        document.getElementById('save_changes').onclick = function () {
+            sessionStorage.setItem('person_name', document.getElementById("name").value);
+            sessionStorage.setItem('personal_bio', document.getElementById("personal_bio").value);
+            window.location.href = "regularProfile_screen.html";
+        };
+
+        function addTag(tag) {
+            var tagElement = document.createElement('li');
+            tagElement.innerText = tag;
+            tagElement.innerHTML += '<button class="delete-button">X</button>';
+            document.getElementById('tags').appendChild(tagElement);
+        }
+
+        document.getElementById('input-tag').addEventListener('keydown', function (event) {
+            if (event.key == 'Enter') {
+                event.preventDefault();
+                const tag = document.createElement('li');
+                const tagContent = document.getElementById('input-tag').value.trim();
+                if (tagContent !== '') {
+                    tag.innerText = tagContent;
+                    if (tag.innerText.length > 10) {
+                        alert('Tag is too long!');
+                    }
+                    else if (tag.innerText.length < 2) {
+                        alert('Tag is too short!');
+                    }
+                    else if (tag.innerText.includes(',') || tag.innerText.includes(';') || tag.innerText.includes(':') || tag.innerText.includes('.') || tag.innerText.includes('!') || tag.innerText.includes('?')) {
+                        alert('Tag cannot contain punctuation!');
+                    }
+                    else if (tag.innerText.includes(' ')) {
+                        alert('Tag cannot contain spaces!');
+                    }
+                    else if (document.getElementById('tags').children.length >= 10) {
+                        alert('You can only have 10 tags!');
+                    }
+                    else {
+                        if (sessionStorage.getItem('tags') == null) {
+                            sessionStorage.setItem('tags', tag.innerText);
+                        } else {
+                            sessionStorage.setItem('tags', sessionStorage.getItem('tags') + ',' + tag.innerText);
+                        }
+                        addTag(tag.innerText);
+                        document.getElementById('input-tag').value = '';
+                    }
+                }
+            }
+        });
+
+        document.getElementById('tags').addEventListener('click', function (event) {
+            if (event.target.classList.contains('delete-button')) {  // If the clicked element has the class 'delete-button' 
+                update_tags(event.target.parentNode.innerText);
+                event.target.parentNode.remove(); // Remove the tag
+            }
+        });
+
+        function update_tags(tag_text) {
+            tag_text = tag_text.replace('X', '');
+            var tag_list = sessionStorage.getItem('tags');
+            tag_list = tag_list.split(',');
+            for (var i = 0; i < tag_list.length; i++) {
+                if (tag_list[i].includes(tag_text)) {
+                    tag_list.splice(i, 1);
+                    break;
+                }
+            }
+            sessionStorage.setItem('tags', JSON.stringify(tag_list));
+        }
+    </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="messaging.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <title>GoFetch Inbox</title>
+    <script type="text/javascript" src="buttons.js"></script>
+    <script type="text/javascript" src="messages.js"></script>
+</head>
+<div id="mySidenav" class="sidenav">
+    <div id="viewProf" class="sidenav">
+        <div class="topInfo">My Profiles:</div>
+        <div class="bar"></div>
+        <a href="./regularProfile_screen.html" class="subitem">My Profile</a>
+        <a href="./regularProfile_dog_screen.html" class="subitem">My Dog</a>
+        <a href="./addDog_screen.html" class="subitem">+ Add Dog</a>
+        <div class="bottom-bar"></div>
+        <a class="return" onclick="closeProf()">Return to Main</a>
+    </div>
+
+    <!-- <a href="./home_screen.html">Home</a> -->
+    <a class="menu-item" onclick="openProf()">Your Profiles<div class="arrow">></div></a>
+    <a class="menu-item" href="./settingsmenu/settings.html">Settings<div class="arrow">></div></a>
+    <a class="logout" href="./login_screen.html">Logout</a>
+</div>
+<style>
+    .middle-text {
+       flex: 1;
+       text-align: center;
+       font-size: 1rem; 
+       margin-left: 10px;
+   }
+   </style>
+
+<body>
+    <div class="container">
+        <div class="top_menu" style="background-color: #ffffff; border-color: #000;">
+            <a href="./inbox.html" alt="Back" class ="back-arrow" style="margin-top: 15px; margin-right:30px; margin-left: 0px; zoom: 1.5;"><img src="../assets/BackArrow.png" ></a>
+            
+            <div class="message-person">
+                <div class="message-person-text">
+                    <a href="./dog_screen.html"><img src="../assets/profile_icon.png" alt="Profile" class="back-arrow" style="position: absolute; border-radius: 50%; border: 2px solid #000; width: 40px; height: 40px; margin: -8px -10px"> </a>
+                    <a href="./home_screen.html"><img src="../assets/dog2.png" alt="Profile" class="back-arrow" style="position: absolute; border-radius: 50%; border: 2px solid #000; width: 40px; height: 40px; margin: -8px 30px"> </a>
+                    Messaging Johnny
+                </div>
+            </div>
+        </div>
+
+</style>
+        <p>
+            <div class="message-received-box">
+                <div class="message-received-text">
+                Hey are we still down to hang out tomorrow night? I am available 4-8pm work.
+                </div>
+                <div class="time-received">20:34 PM | Dec 24</div>
+            </div>
+
+            <div class="message-received-box">
+                <div class="message-received-text">
+                We can go to the park?
+                </div>
+                <div class="time-received">20:35 PM | Dec 24</div>
+            </div>
+
+            <div class="message-sent-box">
+                <div class="time-sent">20:38 PM | Dec 24</div>
+                <div class="message-sent-text">
+                Yeah! I should be free tomorrow night!
+                </div>
+            </div>
+
+            <div class="message-sent-box">
+                <div class="time-sent">12:34 PM | Dec 30</div>
+                <div class="message-sent-text">
+                Yo?
+                </div>
+            </div>
+
+            <div class="message-received-box">
+                <div class="message-received-text">
+                Sorry I got really busy, lets meet up tomorrow!
+                </div>
+                <div class="time-received">20:35 PM | Dec 24</div>
+            </div>
+        </p>
+        
+        <div class="msg-bottom">
+            <input type="text" class="form-control" placeholder="Write message..." style="background: #fcc08a;">
+            <img src="../assets/send_icon.png" onclick="alert('Under Development')">
+            <img src="../assets/camera_icon.png" onclick="alert('Under Development')">
+            <img src="../assets/image_icon.png" onclick="alert('Under Development')" >
+        </div>
+    </div>
+</body>
+</html>
+

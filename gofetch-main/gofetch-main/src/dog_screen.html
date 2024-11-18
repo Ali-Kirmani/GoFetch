@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <title>Go Fetch Home Screen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <script type="text/javascript" src="buttons.js"></script>
+</head>
+<!-- 
+================================================================================ 
+                        kyle's nav bar content starts here
+================================================================================
+-->
+
+<div id="mySidenav" class="sidenav">
+    <div id="viewProf" class="sidenav">
+        <div class="topInfo">My Profiles:</div>
+        <div class="bar"></div>
+        <a href="./regularProfile_screen.html" class="subitem">My Profile</a>
+        <a href="./regularProfile_dog_screen.html" class="subitem">My Dog</a>
+        <a href="./addDog_screen.html" class="subitem">+ Add Dog</a>
+        <div class="bottom-bar"></div>
+        <a class="return" onclick="closeProf()">Return to Main</a>
+    </div>
+
+    <!-- <a href="./home_screen.html">Home</a> -->
+    <a class="menu-item" onclick="openProf()">Your Profiles<div class="arrow">></div></a>
+    <a class="menu-item" href="./settingsmenu/settings.html">Settings<div class="arrow">></div></a>
+    <a class="logout" href="./login_screen.html">Logout</a>
+</div>
+
+
+<body>
+    <div class="container">
+        <div class="top_menu">
+            <span id="hamburger-menu" class="hamburger-menu" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </span>
+            <img src="../assets/gofetch.png" alt="Logo" class="fetch-logo">
+        </div>
+        <!-- 
+        ======================================================================== 
+                            kyle's nav bar content ends here
+        ========================================================================
+         -->
+
+
+        <div class="image-content">
+            <img src="../assets/dog.png" alt="Dog Image" class="profile-image">
+            <img src="../assets/user.png" alt="User Image" class="profile-bubble">
+        </div>
+
+
+        <div class="info-content">
+            <div class="name-container">
+                <div class="profile-name">Mon Ke</div>
+                <div class="and-item"><i><b>and</b></i></div>
+                <div class="sub-profile-name"><strong>Benny</strong></div>
+                <div class="vertical-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dropdown-menu">
+                        <!-- Add your dropdown menu items here -->
+                        <a href="./home_screen.html">Report</a>
+                        <a href="./home_screen.html">Block</a>
+                        <a href="./home_screen.html">Unmatch</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subheader">
+                <hr style="background-color: white; height: 5px; border-color: white; border-style: none;">
+                
+                <b>Location:</b> Calgary, AB
+            </div>
+            
+            <div class="subheader"><b>About:</b></div>
+            <div class="about">
+                <body> Benny is a 3 year old dog who loves to run and play. I wish I could keep up with him!
+                </body>
+            </div>
+            
+            <div class="subheader"><b>Tags:</b></div>
+            <div class="about">
+                <span class="tag">excited</span>
+                <span class="tag">high-energy</span>
+                <span class="tag">young</span>
+                <span class="tag">small</span>
+            </div>
+        </div>
+
+        <div class="match-container">
+            <a class="match-dislike" href="home_screen.html"><img src="../assets/pass_icon.png"></a>
+            <a class="match-username" href="./home_screen.html"><strong>About Monke</strong></a>
+            <a class="match-like" href="home_screen.html"><img src="../assets/match_icon.png"></a> 
+        </div>
+
+
+
+        <div class="bottom_menu">
+            <a href="./inbox.html" class="inbox"><img src="../../assets/message_icon.png" alt="Messages"></a>
+            <a href="./home_screen.html" class="home"><img src="../../assets/home_icon.png" alt="Home" ></a>
+            <a href="./regularProfile_screen.html" class="profile"><img src="../../assets/profile_icon.png" alt="Profile" ></a>
+        </div>
+    </div>
+</body>
+
+</html>

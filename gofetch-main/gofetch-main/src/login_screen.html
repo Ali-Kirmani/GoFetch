@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>GoFetch Login</title>
+</head>
+<body> 
+    <div class="center-container">
+        <img src="../assets/gofetch.png" alt="Logo" style="max-width: 55%;max-height:55%;">
+        <div class="login_content">
+            <div class="header">Log In</div>
+            <p><input type="email" id="email" placeholder="E-mail"></p>
+            <p><input type="password" id="password" placeholder="Password"></p>
+            <button class="button" id="login_button">Log In</button>
+            <p>Don't have an account?<br /> <a href="signup_screen.html">Sign up</a></p>
+            <p><a href="forgot_password_screen.html">Forgot your password?</a></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="signup.js"></script>
+    <script type="text/javascript" src="signup2.js"></script>
+    <script type="text/javascript" src="signup3.js"></script>
+    <script type="text/javascript">
+        document.getElementById('login_button').onclick = function () {
+            if (validateLogin()) {
+                getPersonName(); 
+                getPersonalBio();
+                getDogName();
+                getDogBio();
+                window.location.href = "home_screen.html";
+            } 
+        };
+    </script>
+</body>
+</html>
